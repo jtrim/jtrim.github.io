@@ -24,6 +24,10 @@ body {
   padding-bottom: 120px;
 }
 
+.demo-logo {
+  display: inline-block;
+}
+
 .demo-logo small {
   font-size: 18px;
 }
@@ -46,4 +50,15 @@ h4 {
 
 .demo-headline {
   padding-bottom: 60px;
+}
+
+.demo-headline .avatar {
+  vertical-align: baseline;
+  margin-bottom: 22px;
+  margin-right: 25px;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
