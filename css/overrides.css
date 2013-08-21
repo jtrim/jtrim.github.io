@@ -10,15 +10,14 @@ li {
   list-style-type: none;
   list-style-position: inside;
   position: relative;
-  margin-left: 15px;
+  margin-left: 18px;
 }
 
 li::before {
   position: absolute;
   left: -15px;
-  content: '—';
+  content: '•';
   font-size: 12px;
-  color: #ccc;
 }
 
 body {
@@ -31,4 +30,12 @@ body {
 
 .demo-logo small a {
   color: rgba(52, 73, 94, 0.30000000000000004);
+}
+
+h2 {
+  margin-top: 15px;
+}
+
+h4 {
+  margin-top: 20px;
 }
