@@ -3,7 +3,7 @@ layout: default
 title:  "Resume"
 date:   2013-08-20 18:49:42
 categories: resume
-small: 'Evergreen, CO&nbsp;&nbsp;—&nbsp;&nbsp;<a href="https://twitter.com/jessetrimble">@jessetrimble</a>&nbsp;&nbsp;—&nbsp;&nbsp;<a href="https://github.com/jtrim">https://github.com/jtrim</a>'
+small: 'Evergreen, CO'
 ---
 
 # Experience

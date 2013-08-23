@@ -2,10 +2,14 @@
 <html lang="en">
   <!-- Look and feel comes from: http://designmodo.com/demo/flat-ui/ -->
   {% include head.html %}
-  <body>
+  <body class="{{ page.body_classname }}">
     <div class="container">
       {% include headline.html %}
+      {% include nav.html %}
       {{ content }}
+    </div>
+    <div class="container footer">
+      <small>&copy; 2013 Jesse Trimble</small>
     </div>
   </body>
 </html>

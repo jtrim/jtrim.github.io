@@ -13,7 +13,7 @@ li {
   margin-left: 18px;
 }
 
-li::before {
+li:before {
   position: absolute;
   left: -15px;
   content: '•';
@@ -26,6 +26,15 @@ body {
 
 .demo-logo {
   display: inline-block;
+}
+
+.demo-logo a {
+  text-decoration: none;
+  color: rgb(52, 73, 94);
+}
+
+.demo-logo a:hover {
+  color: #18AB8E;
 }
 
 .demo-logo small {
@@ -49,16 +58,98 @@ h4 {
 }
 
 .demo-headline {
-  padding-bottom: 60px;
+  padding-bottom: 0;
+  position: relative;
 }
 
 .demo-headline .avatar {
-  vertical-align: baseline;
-  margin-bottom: 22px;
-  margin-right: 25px;
-  position: relative;
+  position: absolute;
+  left: 70px;
+  top: 97px;
 
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+body.about .about-content {
+  position: relative;
+  height: 620px;
+}
+
+body.about .about-content * {
+  position: relative;
+  z-index: 1000;
+}
+
+body.about .about-content h4,
+body.about .about-content div {
+  padding-left: 60px;
+}
+
+body.about .about-image {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  z-index: 500;
+}
+
+nav {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 50px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:after {
+  content: '•';
+  color: #cfcfcf;
+  padding: 0 15px;
+  font-size: 10px;
+  position: relative;
+  top: -3px;
+}
+
+nav a.twitter:before,
+nav a.instagram:before,
+nav a.github:before {
+  font-family: FontAwesome;
+  padding-right: 3px;
+}
+
+nav a.twitter:before {
+  content: "\f099";
+}
+
+nav a.instagram:before {
+  content: "\f16d";
+}
+
+nav a.github:before {
+  content: "\f09b";
+}
+
+nav a.github:after {
+  content: '';
+  padding: 0;
+}
+
+div.footer {
+  background: transparent;
+  text-align: center;
+  margin-top: 40px;
+}
+
+div.footer small {
+  color: #afafaf;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.container {
+  position: relative;
 }
