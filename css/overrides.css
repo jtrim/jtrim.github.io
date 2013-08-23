@@ -74,7 +74,7 @@ h4 {
 
 body.about .about-content {
   position: relative;
-  height: 620px;
+  height: 670px;
 }
 
 body.about .about-content * {
@@ -82,14 +82,15 @@ body.about .about-content * {
   z-index: 1000;
 }
 
+body.about .about-content h1,
 body.about .about-content h4,
 body.about .about-content div {
-  padding-left: 60px;
+  padding-left: 30px;
 }
 
 body.about .about-image {
   position: absolute;
-  top: 180px;
+  top: 230px;
   left: 0;
   z-index: 500;
 }
