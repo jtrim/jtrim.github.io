@@ -154,3 +154,30 @@ div.footer small {
 .container {
   position: relative;
 }
+
+.posts > div {
+  padding: 25px 0 40px 0;
+  border-top: 1px solid #cfcfcf;
+}
+
+.posts > div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+h3.title {
+  margin-bottom: 20px;
+}
+
+.post {
+  margin-bottom: 30px;
+}
+
+pre,
+pre * {
+  font-weight: normal !important;
+}
+
+small a {
+  text-decoration: none;
+}
