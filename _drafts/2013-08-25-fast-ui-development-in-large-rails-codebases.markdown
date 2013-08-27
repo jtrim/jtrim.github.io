@@ -7,11 +7,79 @@ permalink: fast-ui-development-rails.html
 content_as_excerpt: true
 ---
 
-I've spent the past year working on a product running on a relatively large
-Rails codebase, spending about half my time on the back-end and half in the UI
-layer. As the codebase has grown in size on the back-end, I've noticed an
-increasingly prevalent source of frustration in my day-to-day: slow request
-times when writing code for the UI.
+Working on the UI in a large Rails codebase? You don't have to wait for long
+request times caused by Rails' automatic code reloading in development mode.
+A couple of tweaks in `config/environemnts/development.rb` along with
+introducing a couple of libraries into your workflow (one of which you should
+be using already) can make a pretty substantial difference in request times.
+
+#### FASTDEV!
+
+In any given day I could spend about half of my time writing Ruby code for
+Rails and half of the time in the UI layer. I like the flexibility of being
+able two switch between focuses, so I've introduced something I call `FASTDEV`,
+which refers to an environment variable supplied to the running Rails server
+process.
+
+When I'm doing heavy UI development, I start my Rails server thusly:
+
+{% highlight shell %}
+FASTDEV=true rails s
+{% endhighlight %}
+
+And when I'm spending most of my time on the back-end I just start the Rails
+server as usual. Here's what `FASTDEV=true` is doing:
+
+{% highlight ruby %}
+# config/environments/development.rb
+
+Foo::Application.configure do
+  # irrelevant config omitted...
+
+  config.cache_classes = false
+  config.assets.debug = true
+
+  if ENV['FASTDEV']
+    config.cache_classes = true
+    config.assets.debug = false
+  end
+end
+{% endhighlight %}
+
+First, `config.cache_classes = false` causes Rails to reload all application
+code on each request. In a large Rails codebase, this is where most of the
+overhead comes from. By changing `config.cache_classes = true`, Rails caches
+the application code once on boot, resulting in a pretty significant
+performance boost.
+
+Second, `config.assets.debug` causes a request for an asset that looks like
+this:
+
+{% highlight coffeescript %}
+#= require foo
+#= require bar
+#= require baz
+
+Do(Some(Stuff()))
+{% endhighlight %}
+
+...to actually issue four separate requests for each asset. This is pretty nice
+when you're debugging a problem in yoru Javascripts, however I find it to be
+unnecessary *most* of the time. Changing `config.assets.debug = false` prevents
+those require statements from being expanded into actual requests. In
+a codebase with a pretty heavy front-end, this can also be significant.
+
+#### One Problem - What If I *Want* Code Reloading?
+
+Even in heavy UI-development mode, I inevitably find myself needing to change
+a view or tweak some other Ruby code somewhere. With `FASTDEV`, each of those
+changes means I've got to restart the server to see it reflected in the
+application behavior. This can get annoying quickly. Luckily, using Unicorn and
+Rerun we have a pretty workable solution.
+
+
+#### Unicorn
+
 
 #### But slow Rails should be a thing of the past. What's up?
 
