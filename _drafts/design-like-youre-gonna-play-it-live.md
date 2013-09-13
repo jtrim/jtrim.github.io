@@ -51,14 +51,30 @@ As developers, this is an easy thing to spot. But what can we do about it?
 For a non-developer that wants (or needs) to understand what design components
 are feasible has a pretty steep hill to climb. Developers are notoriously bad
 at internalizing things, and UI feasibility is no exception. We take for
-granted that our peers know custom select boxes are damned unpleasant to
-code. Once we understand this, we're in a position to do something about it.
+granted that our peers know things like custom select boxes are damned
+unpleasant to code, for example. But once we understand this internalization,
+we're in a position to do something about it.
 
-One clarification - I'm not suggesting that every designer should learn how to
-code. I feel like thinking in terms of code alters the creative process for
-some, so I don't think it's fair to say "Only good designers code." However,
-that doesn't mean that - when it counts - through pairing
+Before I dive in to this topic, one clarification - I'm not suggesting that
+every designer should learn how to code. I feel like thinking in terms of code
+alters the creative process for some, so I don't think it's fair to say "Only
+good designers code." However, at least in these terms, identifying a design
+element that can be a digital red herring is mostly painted black and white. As
+such, this know-how is usually pretty quick and easy to pass on.
 
-http://www.andersramsay.com/2009/05/01/less-wireframes-more-collaboration-with-pair-design/
+When two developers pair on a problem, and especially when the two developers
+really mesh, it's very much an act of filling in each other's weaknesses and
+augmenting the other's strengths. I believe the same thing can happen across
+disciplines. The details are mostly outside the scope of this text, but [Anders
+Ramsay explores this in-depth
+here](http://www.andersramsay.com/2009/05/01/less-wireframes-more-collaboration-with-pair-design/).
+
+
+
+
+
+
+
+
 
 
