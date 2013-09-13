@@ -66,8 +66,16 @@ When two developers pair on a problem, and especially when the two developers
 really mesh, it's very much an act of filling in each other's weaknesses and
 augmenting the other's strengths. I believe the same thing can happen across
 disciplines. The details are mostly outside the scope of this text, but [Anders
-Ramsay explores this in-depth
+Ramsay explores this in detail
 here](http://www.andersramsay.com/2009/05/01/less-wireframes-more-collaboration-with-pair-design/).
+With cross-discipline pairing, two advantages become clear pretty quickly,
+
+- Design / concept rabbit holes essentially disappear
+- Implementation pains becomes very real for the designer
+
+...with a third peripheral benefit:
+
+- TODO
 
 
 
