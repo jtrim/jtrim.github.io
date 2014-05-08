@@ -1,0 +1,48 @@
+html, body {
+  height: 100%; }
+
+html {
+  background: url(/images/2014/background.jpg); }
+
+body {
+  background: url(/images/2014/left-background.jpg) 0 0 repeat-y;
+  padding-top: 1px; }
+
+nav {
+  margin-top: 49px;
+  margin-left: 50px;
+  background: white;
+  height: 49px; }
+  nav h1 {
+    font-family: "AvantGarde-CondensedMedium";
+    text-transform: uppercase;
+    padding: 1px 0 0 5px;
+    margin: 0;
+    display: inline-block;
+    font-size: 55px;
+    line-height: 55px; }
+    nav h1 a {
+      padding: 0;
+      margin: 0;
+      color: #ff1b86; }
+    nav h1 span {
+      padding-left: 3px; }
+  nav .secondary {
+    font-family: "NeuzeitGrotesk-Regular";
+    display: inline-block;
+    vertical-align: top; }
+    nav .secondary span {
+      text-transform: uppercase; }
+  nav ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0; }
+    nav ul li {
+      display: inline-block;
+      text-transform: lowercase; }
+      nav ul li:before {
+        content: ' / '; }
+      nav ul li:first-child:before {
+        content: none; }
+  nav a {
+    text-decoration: none; }

@@ -5,9 +5,45 @@
     <title>{{ site.name }} - {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/pygments.css" rel="stylesheet" />
+    <link href="/css/2014/normalize.css" rel="stylesheet" />
+    <link href="/css/2014/all.css" rel="stylesheet" />
+    <link href="/css/2014/avant-garde.css" rel="stylesheet" />
+    <link href="/css/2014/neuzeit-grotesk.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body class="{{ page.body_classname }}">
-    {{ content }}
+    <nav>
+      <h1>
+        <a href="/">Jesse<span>Trimble</span></a>
+      </h1>
+
+      <div class="secondary">
+        <span>
+          Software Developer
+        </span>
+        <small>
+          Boulder, CO
+        </small>
+
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <div>
+        {{ content }}
+      </div>
+    </section>
+
+    <div class="vignette vignette-tr"></div>
+    <div class="vignette vignette-br"></div>
+    <div class="vignette vignette-bl"></div>
+    <div class="vignette vignette-tl"></div>
   </body>
 </html>

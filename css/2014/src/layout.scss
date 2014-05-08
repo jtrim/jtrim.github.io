@@ -1,0 +1,78 @@
+@import 'fonts';
+@import 'colors';
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background: url(/images/2014/background.jpg);
+}
+
+body {
+  background: url(/images/2014/left-background.jpg) 0 0 repeat-y;
+  padding-top: 1px;
+}
+
+nav {
+  margin-top: 49px;
+  margin-left: 50px;
+  background: white;
+  height: 49px;
+
+  h1 {
+    @include avant-garde-font;
+    text-transform: uppercase;
+    padding: 1px 0 0 5px;
+    margin: 0;
+    display: inline-block;
+    font-size: 55px;
+    line-height: 55px;
+
+    a {
+      padding: 0;
+      margin: 0;
+      color: $magenta;
+    }
+
+    span {
+      padding-left: 3px;
+    }
+  }
+
+  .secondary {
+    @include neuzeit-grotesk-font;
+    display: inline-block;
+    vertical-align: top;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      text-transform: lowercase;
+
+      &:before {
+        content: ' / ';
+      }
+
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}

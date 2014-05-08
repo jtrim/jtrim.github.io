@@ -1,0 +1,30 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2807244, 2014-05-06T22:08:13-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: ITC Avant Garde Condensed Medium by ITC
+ * URL: http://www.myfonts.com/fonts/itc/avant-garde-gothic/avant-garde-condensed-medium/
+ * Copyright: Copyright 1993, 1994, 2001 Adobe Systems Incorporated. All Rights Reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2807244
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2ad5cc");
+
+@font-face {
+  font-family: 'AvantGarde-CondensedMedium';
+  src: url('/fonts/2014/ITCAvantGardeGothicCondensed.eot');
+  src: url('/fonts/2014/ITCAvantGardeGothicCondensed.eot?#iefix') format('embedded-opentype'), url('/fonts/2014/ITCAvantGardeGothicCondensed.woff') format('woff'), url('/fonts/2014/ITCAvantGardeGothicCondensed.ttf') format('truetype');
+}
