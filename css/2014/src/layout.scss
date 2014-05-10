@@ -19,6 +19,7 @@ nav {
   margin-left: 50px;
   background: white;
   height: 49px;
+  width: 699px;
 
   h1 {
     @include avant-garde-font;
@@ -36,7 +37,7 @@ nav {
     }
 
     span {
-      padding-left: 3px;
+      padding-left: 5px;
     }
   }
 
@@ -44,28 +45,52 @@ nav {
     @include neuzeit-grotesk-font;
     display: inline-block;
     vertical-align: top;
+    font-size: 150%;
+    margin-left: 4px;
+    padding-top: 1px;
 
     span {
       text-transform: uppercase;
+      color: $pastel-green;
+    }
+
+    small {
+      text-transform: lowercase;
+      padding-left: 3px;
     }
   }
 
   ul {
     list-style-type: none;
     list-style-position: inside;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: $cyan;
 
     li {
       display: inline-block;
       text-transform: lowercase;
 
       &:before {
-        content: ' / ';
+        content: '.';
+        padding: 0 10px;
       }
 
       &:first-child {
         &:before {
           content: none;
+        }
+      }
+
+      a {
+        color: $cyan;
+        padding: 0 1px;
+        transition: all .1s linear;
+
+        &:hover {
+          color: white;
+          background: $magenta;
         }
       }
     }

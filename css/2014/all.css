@@ -12,7 +12,8 @@ nav {
   margin-top: 49px;
   margin-left: 50px;
   background: white;
-  height: 49px; }
+  height: 49px;
+  width: 699px; }
   nav h1 {
     font-family: "AvantGarde-CondensedMedium";
     text-transform: uppercase;
@@ -26,23 +27,41 @@ nav {
       margin: 0;
       color: #ff1b86; }
     nav h1 span {
-      padding-left: 3px; }
+      padding-left: 5px; }
   nav .secondary {
     font-family: "NeuzeitGrotesk-Regular";
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    font-size: 150%;
+    margin-left: 4px;
+    padding-top: 1px; }
     nav .secondary span {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: #b1d199; }
+    nav .secondary small {
+      text-transform: lowercase;
+      padding-left: 3px; }
   nav ul {
     list-style-type: none;
     list-style-position: inside;
-    padding-left: 0; }
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #2edee4; }
     nav ul li {
       display: inline-block;
       text-transform: lowercase; }
       nav ul li:before {
-        content: ' / '; }
+        content: '.';
+        padding: 0 10px; }
       nav ul li:first-child:before {
         content: none; }
+      nav ul li a {
+        color: #2edee4;
+        padding: 0 1px;
+        transition: all .1s linear; }
+        nav ul li a:hover {
+          color: white;
+          background: #ff1b86; }
   nav a {
     text-decoration: none; }
