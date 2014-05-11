@@ -106,8 +106,16 @@ nav {
 
 body {
   > section {
-    > div {
+    padding-top: 50px;
+
+    div.post {
+      max-width: 674px;
+      padding: 25px;
+      padding-left: 50px;
       background: white;
+      margin-bottom: 26px;
+      border-bottom: 1px solid $pink;
+      border-top: 1px solid $pink;
     }
   }
 }

@@ -68,5 +68,13 @@ nav {
   nav a {
     text-decoration: none; }
 
-body > section > div {
-  background: white; }
+body > section {
+  padding-top: 50px; }
+  body > section div.post {
+    max-width: 674px;
+    padding: 25px;
+    padding-left: 50px;
+    background: white;
+    margin-bottom: 26px;
+    border-bottom: 1px solid #ffc8e2;
+    border-top: 1px solid #ffc8e2; }
