@@ -46,22 +46,27 @@ nav {
     list-style-position: inside;
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: #2edee4; }
     nav ul li {
       display: inline-block;
-      text-transform: lowercase; }
+      text-transform: lowercase;
+      margin-top: 2px; }
       nav ul li:before {
-        content: '.';
-        padding: 0 10px; }
+        content: '/';
+        font-size: 12px;
+        padding: 0 11px; }
       nav ul li:first-child:before {
         content: none; }
       nav ul li a {
         color: #2edee4;
-        padding: 0 1px;
+        padding: 0 2px;
         transition: all .1s linear; }
         nav ul li a:hover {
           color: white;
           background: #ff1b86; }
   nav a {
     text-decoration: none; }
+
+body > section > div {
+  background: white; }

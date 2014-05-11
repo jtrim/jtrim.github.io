@@ -65,16 +65,18 @@ nav {
     list-style-position: inside;
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: $cyan;
 
     li {
       display: inline-block;
       text-transform: lowercase;
+      margin-top: 2px;
 
       &:before {
-        content: '.';
-        padding: 0 10px;
+        content: '/';
+        font-size: 12px;
+        padding: 0 11px;
       }
 
       &:first-child {
@@ -85,7 +87,7 @@ nav {
 
       a {
         color: $cyan;
-        padding: 0 1px;
+        padding: 0 2px;
         transition: all .1s linear;
 
         &:hover {
@@ -101,3 +103,13 @@ nav {
   }
 
 }
+
+body {
+  > section {
+    > div {
+      background: white;
+    }
+  }
+}
+
+
