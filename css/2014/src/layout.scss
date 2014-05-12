@@ -113,9 +113,48 @@ body {
       padding: 25px;
       padding-left: 50px;
       background: white;
-      margin-bottom: 26px;
+      margin-bottom: 52px;
       border-bottom: 1px solid $pink;
       border-top: 1px solid $pink;
+      @include neuzeit-grotesk-font;
+      line-height: 25px;
+
+      code,
+      pre {
+        font-size: 14px;
+      }
+
+      small {
+        line-height: normal;
+      }
+
+      h4 {
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: auto 0 5px 0;
+      }
+
+      h3 {
+        @include avant-garde-font;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: $magenta;
+          text-decoration: none;
+          padding: 3px 3px 0 3px;
+          display: inline-block;
+          position: relative;
+          left: -3px;
+
+          &:hover {
+            background: black;
+            color: white;
+          }
+        }
+      }
     }
   }
 }

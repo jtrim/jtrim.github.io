@@ -75,6 +75,33 @@ body > section {
     padding: 25px;
     padding-left: 50px;
     background: white;
-    margin-bottom: 26px;
+    margin-bottom: 52px;
     border-bottom: 1px solid #ffc8e2;
-    border-top: 1px solid #ffc8e2; }
+    border-top: 1px solid #ffc8e2;
+    font-family: "NeuzeitGrotesk-Regular";
+    line-height: 25px; }
+    body > section div.post code,
+    body > section div.post pre {
+      font-size: 14px; }
+    body > section div.post small {
+      line-height: normal; }
+    body > section div.post h4 {
+      font-weight: normal;
+      text-transform: uppercase;
+      margin: auto 0 5px 0; }
+    body > section div.post h3 {
+      font-family: "AvantGarde-CondensedMedium";
+      font-weight: normal;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0; }
+      body > section div.post h3 a {
+        color: #ff1b86;
+        text-decoration: none;
+        padding: 3px 3px 0 3px;
+        display: inline-block;
+        position: relative;
+        left: -3px; }
+        body > section div.post h3 a:hover {
+          background: black;
+          color: white; }
