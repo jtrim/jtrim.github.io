@@ -1,0 +1,23 @@
+---
+---
+
+$wi-width: 1080px;
+$wi-cols: 12;
+$wi-gutter: 40px !default; // must be divisible by 2 for accratue spacing.
+
+@import 'normalize';
+@import 'waffleiron';
+
+.main {
+  @include row();
+
+  .masthead {
+    @include col(5);
+    background: green;
+  }
+
+  .main-content {
+    @include col(7);
+    background: pink;
+  }
+}

@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body class="{{ page.body_classname }}">
-    <div class="container">
-      {% include headline.html %}
-      {% include nav.html %}
-      <div class="span10 offset1">
-        {{ content }}
-      </div>
-    </div>
-    <div class="container footer">
-      <small>&copy; 2013 Jesse Trimble</small>
+  <head>
+    <title>Jesse Trimble</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main">
+      <section class="masthead">
+        <h1>Jesse Trimble</h1>
+        <h3>
+          Software Development
+          <small>Boulder, CO</small>
+        </h3>
+        <hr />
+        <nav class="main-nav">
+          <a href="#">blog</a>
+          <a href="#">resume</a>
+          <a href="#">about</a>
+        </nav>
+        <nav class="secondary-nav">
+          <a href="#">github</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+        </nav>
+
+        <span class="phone">(720) 663-7759</span>
+      </nav><!--
+   --><section class="main-content">
+      </section>
     </div>
   </body>
 </html>
