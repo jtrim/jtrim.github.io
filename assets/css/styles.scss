@@ -170,3 +170,42 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
     @include hr-circle-sattellite;
   }
 }
+
+@mixin blackout-corners($position, $left-image, $right-image) {
+  &:before,
+  &:after {
+    content: ' ';
+    width: 11px;
+    height: 11px;
+    position: fixed;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @if $position == top {
+      top: 0;
+    } @else if $position == bottom {
+      bottom: 0;
+    } @else {
+      @error "The first argument of blackout-corners must be either 'top' or 'bottom'.";
+    }
+  }
+
+  &:before {
+    left: 0;
+    background-image: $left-image;
+  }
+
+  &:after {
+    right: 0;
+    background-image: $right-image;
+  }
+}
+
+body {
+  @include blackout-corners(top, url(/assets/images/tl.png), url(/assets/images/tr.png));
+}
+
+footer {
+  @include blackout-corners(bottom, url(/assets/images/bl.png), url(/assets/images/br.png));
+}
