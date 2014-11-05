@@ -1,0 +1,21 @@
+{
+  "name": "jtrim.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jtrim/jtrim.github.io",
+  "authors": [
+    "Jesse Trimble <jesseltrimble@gmail.com>"
+  ],
+  "license": "none",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.2.0",
+    "normalize.css": "~3.0.2"
+  }
+}

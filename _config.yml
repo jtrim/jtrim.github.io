@@ -2,4 +2,4 @@ name: Jesse Trimble - Rubyist, Javascript Enthusiast
 markdown: redcarpet
 pygments: true
 sass:
-  sass_dir: css
+  sass_dir: assets
