@@ -14,13 +14,13 @@ small: 'Thoughts on code.'
       </h3>
       {% if post.content_as_excerpt %}
         {{ post.content }}
-        <br />
         <small><a href="{{ post.url }}#disqus_thread"></a></small>
       {% else %}
         <p>{{ post.excerpt }}</p>
         <a href="{{ post.url }}">Read more</a>
       {% endif %}
     </div>
+    <hr />
   {% endfor %}
 </div>
 

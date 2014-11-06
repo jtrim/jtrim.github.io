@@ -1,9 +1,16 @@
 ---
 ---
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,900,900italic,100,100italic,300,300italic);
+// Using a traditional import since scss doesn't know how to import non-.scss files
+@import '/assets/components/normalize.css/normalize.css';
+@import '/assets/css/pygments.css';
+
 $wi-width: 1044px;
 $wi-cols: 12;
 $wi-gutter: 40px !default; // must be divisible by 2 for accratue spacing.
+$wi-stacked-breakpoint: 1000px !default;
 
 $fa-font-path: '/assets/components/fontawesome/fonts';
 
@@ -11,9 +18,6 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 @import 'components/fontawesome/scss/font-awesome';
 @import 'css/avant_gard-cond_medium';
 @import 'css/neuzeit_grotesk_regular';
-
-// Using a traditional import since scss doesn't know how to import non-.scss files
-@import '/assets/components/normalize.css/normalize.css';
 
 @mixin icon($name, $position: 'before') {
   &:#{$position} {
@@ -25,16 +29,22 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
 .main {
   @include row();
+  padding-top: 80px;
 
   .masthead {
     @include col(5);
-    padding-top: 80px;
+    position: relative;
+
+    hr {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
 
     h1, h3 {
       font-weight: normal;
       text-transform: uppercase;
       white-space: nowrap;
-      line-height: 0;
+      margin: 0;
     }
 
     h1 {
@@ -48,6 +58,9 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
       font-size: 26px;
       color: #b1d199;
       padding-top: 5px;
+      padding-bottom: 5px;
+      line-height: 22px;
+      margin-bottom: 15px;
 
       small {
         text-transform: lowercase;
@@ -125,7 +138,7 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
     .phone {
       margin-top: 5px;
-      font-family: Helvetica Neue, NeuzeitGrotesk;
+      font-family: Roboto, Helvetica Neue, NeuzeitGrotesk;
       font-weight: 100;
       color: #888;
     }
@@ -133,7 +146,53 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
   .main-content {
     @include col(7);
-    background: pink;
+
+    .posts {
+      > div { // post
+        margin-bottom: 40px;
+
+        .title {
+          line-height: 30px;
+          margin-top: 0;
+          font-weight: 400;
+          font-size: 25px;
+
+          > a {
+            font-family: Roboto;
+            font-weight: 300;
+            color: #14B8CC;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+          }
+
+          small {
+            font-style: italic;
+            color: #ababab;
+            text-transform: none;
+            font-family: monospace;
+            font-weight: normal;
+            text-transform: lowercase;
+            font-size: 12px;
+            text-align: center;
+            display: block;
+
+            a {
+              color: #afafaf;
+            }
+          }
+        }
+
+        small {
+          display: block;
+          line-height: 18px;
+          font-style: italic;
+        }
+      }
+
+      font-family: 'Open Sans';
+      font-size: 14px;
+    }
   }
 
   @mixin hr-circle {
@@ -168,6 +227,7 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
     position: relative;
     @include hr-circle;
     @include hr-circle-sattellite;
+    margin: 45px 0;
   }
 }
 
@@ -204,8 +264,96 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
 body {
   @include blackout-corners(top, url(/assets/images/tl.png), url(/assets/images/tr.png));
+
+  p {
+    line-height: 28px;
+
+    small {
+      line-height: 10px;
+    }
+  }
 }
 
 footer {
+  @include row();
   @include blackout-corners(bottom, url(/assets/images/bl.png), url(/assets/images/br.png));
+
+  .footer-inner {
+    @include col(7, 5);
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 300;
+  }
+
+  padding-bottom: 30px;
+}
+
+code {
+  background: yellow;
+  color: #b21267;
+  border: 1px solid darken(yellow, 10%);
+  padding: 0 2px;
+  font-size: 13px;
+}
+
+pre {
+  margin: 10px -10px;
+  background: #efefef;
+  padding: 10px;
+  background: lighten(#14B8CC, 50%);
+
+  code {
+    background: inherit;
+    color: inherit;
+    border: inherit;
+  }
+}
+
+@media only screen and (max-width: 1044px) {
+  .main {
+    .masthead {
+      h1 {
+        font-size: 6.3vw;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 3.4vw;
+
+        small {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $wi-stacked-breakpoint) {
+  .main {
+    padding-top: 20px;
+
+    .masthead {
+      margin-bottom: 50px;
+
+      h1 {
+        font-size: 14.2vw;
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 7.7vw;
+
+        small {
+          display: none;
+        }
+      }
+
+      nav {
+        &.main-nav,
+        &.secondary-nav {
+        }
+      }
+    }
+  }
 }

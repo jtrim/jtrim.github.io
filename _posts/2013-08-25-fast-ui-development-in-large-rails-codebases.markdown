@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Fast UI Development in Large Rails Codebases
+title: Fast UI Development in Large Rails Codebases
 categories: development
 tags: rails unicorn
 permalink: fast-ui-development-rails.html
