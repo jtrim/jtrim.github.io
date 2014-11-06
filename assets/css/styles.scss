@@ -10,8 +10,6 @@
 $wi-width: 1044px;
 $wi-cols: 12;
 $wi-gutter: 40px !default; // must be divisible by 2 for accratue spacing.
-$wi-stacked-breakpoint: 1000px !default;
-
 $fa-font-path: '/assets/components/fontawesome/fonts';
 
 @import 'components/waffleiron/waffleiron';
@@ -24,6 +22,29 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
     @extend .fa;
     @extend .fa-#{$name}:before;
     @content;
+  }
+}
+
+@mixin hidpi {
+  @media (-webkit-min-device-pixel-ratio: 1.3),
+  (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    @content;
+  }
+}
+
+@mixin transform($transformations) {
+  -webkit-transform: $transformations;
+  transform: $transformations;
+}
+
+@mixin hidpi-mobile {
+  @include hidpi {
+    @media only screen and (max-width: #{$wi-stacked-breakpoint * 2} ) {
+      @content;
+    }
   }
 }
 
@@ -73,6 +94,14 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
     nav,
     .phone {
       text-align: center;
+
+      .mobile { display: none; }
+      .desktop { display: inherit; }
+
+      @media only screen and (max-width: $wi-stacked-breakpoint) {
+        .mobile  { display: inherit; }
+        .desktop { display: none; }
+      }
     }
 
     nav {
@@ -197,7 +226,7 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
   @mixin hr-circle {
     @include icon('circle-thin') {
-      transform: translate(-50%, -50%);
+      @include transform(translate(-50%, -50%));
       text-align: center;
       color: #cfcfcf;
       background: white;
@@ -210,7 +239,7 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 
   @mixin hr-circle-sattellite {
     @include icon('circle-thin', after) {
-      transform: translate(-220%, -220%);
+      @include transform(translate(-220%, -220%));
       font-size: 5px;
       color: #555;
       position: absolute;
@@ -232,33 +261,35 @@ $fa-font-path: '/assets/components/fontawesome/fonts';
 }
 
 @mixin blackout-corners($position, $left-image, $right-image) {
-  &:before,
-  &:after {
-    content: ' ';
-    width: 11px;
-    height: 11px;
-    position: fixed;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  @media only screen and (min-width: $wi-stacked-breakpoint) {
+    &:before,
+    &:after {
+      content: ' ';
+      width: 11px;
+      height: 11px;
+      position: fixed;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 0 0;
 
-    @if $position == top {
-      top: 0;
-    } @else if $position == bottom {
-      bottom: 0;
-    } @else {
-      @error "The first argument of blackout-corners must be either 'top' or 'bottom'.";
+      @if $position == top {
+        top: 0;
+      } @else if $position == bottom {
+        bottom: 0;
+      } @else {
+        @error "The first argument of blackout-corners must be either 'top' or 'bottom'.";
+      }
     }
-  }
 
-  &:before {
-    left: 0;
-    background-image: $left-image;
-  }
+    &:before {
+      left: 0;
+      background-image: $left-image;
+    }
 
-  &:after {
-    right: 0;
-    background-image: $right-image;
+    &:after {
+      right: 0;
+      background-image: $right-image;
+    }
   }
 }
 
@@ -349,9 +380,13 @@ pre {
         }
       }
 
-      nav {
-        &.main-nav,
-        &.secondary-nav {
+      @include hidpi {
+        h1 {
+          font-size: 13.1vw;
+        }
+
+        h3 {
+          font-size: 7.3vw;
         }
       }
     }
