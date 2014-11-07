@@ -5,32 +5,10 @@
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
   </head>
-  <body>
+  <body class="{{ page.body_classname }}">
     <div class="main">
-      <section class="masthead" data-masthead>
-        <h1>Jesse Trimble</h1>
-        <h3>
-          Software Development
-          <small>Boulder, CO</small>
-        </h3>
-        <hr />
-        <nav class="main-nav">
-          <a href="/">Blog</a><!--
-       --><a href="#">Resume</a><!--
-       --><a href="#">About</a>
-        </nav>
-        <nav class="secondary-nav">
-          <a class="github" href="#">Github</a><!--
-       --><a class="twitter" href="#">Twitter</a><!--
-       --><a class="instagram" href="#">Instagram</a>
-        </nav>
-
-        <div class="phone">
-          <a class="mobile" href="tel:720-663-7759">(720) 663-7759</a>
-          <span class="desktop">(720) 663-7759</span>
-        </div>
-      </section><!--
-   --><section class="main-content">
+      {% include masthead.html %}
+      <section class="main-content">
         {{ content }}
       </section>
     </div>

@@ -1,0 +1,23 @@
+.has-bottom-prop {
+  margin-bottom: 0;
+}
+
+section {
+  margin-top: $box-spacing;
+  margin-bottom: $box-spacing;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.main-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}

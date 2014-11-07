@@ -1,0 +1,36 @@
+body.parts-kit {
+  .kit-head {
+    color: green;
+  }
+
+  .colorbox {
+    $colorbox-size: 80px;
+    width: $colorbox-size;
+    height: $colorbox-size;
+    display: inline-block;
+    margin-right: $box-spacing;
+    margin-bottom: $box-spacing;
+    text-align: center;
+    vertical-align: top;
+
+    &:before {
+      content: ' ';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    &.magenta      { background: $magenta }
+    &.pastel-green { background: $pastel-green }
+    &.slate-blue   { background: $slate-blue }
+    &.blood-red    { background: $blood-red }
+    &.sky-blue     { background: $sky-blue }
+    &.cyan         { background: $cyan }
+
+    &.gray1 { background: $gray1 }
+    &.gray2 { background: $gray2 }
+    &.gray3 { background: $gray3 }
+    &.gray4 { background: $gray4 }
+    &.gray5 { background: $gray5 }
+  }
+}
