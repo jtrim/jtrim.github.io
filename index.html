@@ -1,24 +1,17 @@
 ---
 layout: default
-title: Jesse Trimble - Rubyist, Javascript Enthusiast
-small: 'Thoughts on code.'
 ---
 
 <div class="posts">
   {% for post in site.posts %}
-    <div>
-      <h3 class="title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
+    <div class="post">
+      <h2 class="title">
+        <a class="title-link" href="{{ post.url }}">{{ post.title }}</a>
         <small>{{ post.date | date: "%B %d, %Y" }}</small>
         <small><a href="{{ post.url }}#disqus_thread"></a></small>
-      </h3>
-      {% if post.content_as_excerpt %}
-        {{ post.content }}
-        <small><a href="{{ post.url }}#disqus_thread"></a></small>
-      {% else %}
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url }}">Read more</a>
-      {% endif %}
+      </h2>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}">Read more</a>
     </div>
     <hr />
   {% endfor %}

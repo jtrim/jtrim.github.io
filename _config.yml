@@ -1,5 +1,12 @@
 name: Jesse Trimble - Rubyist, Javascript Enthusiast
-markdown: redcarpet
-pygments: true
+excerpt_separator: <!--\-->
+highlighter: true
 sass:
   sass_dir: assets
+
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  hard_wrap: false
+  input: GFM
+  smart_quotes:  ["apos", "apos", "ldquo", "rdquo"]

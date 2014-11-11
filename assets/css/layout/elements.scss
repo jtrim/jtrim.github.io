@@ -1,0 +1,178 @@
+* {
+  @extend %open-sans;
+}
+
+body {
+  @include media(min-width $restricted) {
+    @include blackout-corners(top,
+      url(/assets/images/tl.png),
+      url(/assets/images/tr.png)
+    );
+  }
+
+  padding-bottom: 50px;
+}
+
+footer {
+  @include media(min-width $restricted) {
+    @include blackout-corners(bottom,
+      url(/assets/images/bl.png),
+      url(/assets/images/br.png)
+    );
+  }
+}
+
+code {
+  background: yellow;
+  color: $blood-red;
+  border: 1px solid darken(yellow, 10%);
+  padding: 0 2px;
+  font-size: 13px;
+  @extend %monospace;
+}
+
+pre {
+  margin: 10px -10px;
+  background: $gray5;
+  padding: 10px;
+  background: $sky-blue;
+  @extend %monospace;
+
+  code {
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    @extend %monospace;
+
+    * {
+      @extend %monospace;
+    }
+  }
+}
+
+p {
+  line-height: 28px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+div, p, section, article {
+  font-size: 14px;
+}
+
+small {
+  line-height: 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: $gray4;
+  position: relative;
+  @include hr-circle;
+  @include hr-circle-sattellite;
+  margin: 45px 0;
+}
+
+section {
+  margin-top: $box-spacing;
+  margin-bottom: $box-spacing;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+img {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $slate-blue;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %roboto;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+h5, h6 {
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+  margin: $box-spacing 0;
+}
+
+h1 {
+  font-size: 40px;
+
+  &:first-child {
+    margin-top: -13px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+
+  &:first-child {
+    margin-top: -10px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+
+  &:first-child {
+    margin-top: -8px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+
+  &:first-child {
+    margin-top: -7px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+
+  &:first-child {
+    margin-top: -7px;
+  }
+}
+
+h6 {
+  font-size: 18px;
+
+  &:first-child {
+    margin-top: -7px;
+  }
+}
+
+blockquote {
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 7px;
+    height: 22px;
+    background: $gray5;
+  }
+}

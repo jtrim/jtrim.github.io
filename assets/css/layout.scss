@@ -1,40 +1,6 @@
-* {
-  @extend %open-sans;
-}
-
-section {
-  margin-top: $box-spacing;
-  margin-bottom: $box-spacing;
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @extend %roboto;
-  font-weight: 300;
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-.main-content {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-blockquote {
-  position: relative;
-
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -15px;
-    width: 7px;
-    height: 22px;
-    background: $gray5;
-  }
-}
+@import 'css/layout/grid_structure';
+@import 'css/layout/elements';
+@import 'css/layout/masthead';
+@import 'css/layout/footer';
+@import 'css/layout/posts';
+@import 'css/layout/images';

@@ -1,5 +1,5 @@
-@import 'css/fonts/avant_garde_cond_medium';
-@import 'css/fonts/neuzeit_grotesk';
+@import 'css/common/fonts/avant_garde_cond_medium';
+@import 'css/common/fonts/neuzeit_grotesk';
 
 @mixin sans-serif($primary) {
   font-family: $primary, Helvetica, Arial, 'Sans Serif';

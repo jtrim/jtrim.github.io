@@ -1,9 +1,6 @@
 ---
 layout: default
 title:  "Resume"
-date:   2013-08-20 18:49:42
-categories: resume
-small: 'Evergreen, CO'
 ---
 
 # Experience
