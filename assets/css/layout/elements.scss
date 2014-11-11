@@ -62,8 +62,9 @@ div, p, section, article {
   font-size: 14px;
 }
 
-small {
-  line-height: 10px;
+small,
+p small {
+  line-height: normal;
 }
 
 hr {
@@ -164,15 +165,8 @@ h6 {
 }
 
 blockquote {
-  position: relative;
-
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -15px;
-    width: 7px;
-    height: 22px;
-    background: $gray5;
-  }
+  border-left: 7px solid $gray5;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-weight: 300;
 }

@@ -1,0 +1,59 @@
+body.resume {
+  .main-content {
+    $indent: 15px;
+
+    h3, h4, h5, h6, p, ul, hr {
+      margin-left: $indent;
+    }
+
+    h3, h4, h5, h6,
+    section {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      color: $magenta;
+
+      small {
+        @extend %open-sans;
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    h4 {
+      margin-top: $box-spacing;
+      font-size: 18px;
+    }
+
+    small {
+      display: inline-block;
+      font-size: 13px;
+    }
+
+    ul {
+      list-style-type: none;
+      list-stlye-position: inside;
+      padding-left: 0;
+    }
+
+    li {
+      padding-left: 10px;
+      border-left: 8px solid $gray5;
+      line-height: 28px;
+    }
+
+    a {
+      color: $slate-blue;
+      background: $sky-blue;
+      border-bottom: 1px solid $slate-blue;
+      text-decoration: none;
+    }
+  }
+}
