@@ -73,6 +73,7 @@ hr {
   width: 100%;
   background: $gray4;
   position: relative;
+  overflow: visible;
   @include hr-circle;
   @include hr-circle-sattellite;
   margin: 45px 0;

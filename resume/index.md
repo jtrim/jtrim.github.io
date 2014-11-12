@@ -75,6 +75,8 @@ Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
 [Whirl](https://github.com/jtrim/whirl)   
 [Littlenote](https://github.com/jtrim/littlenote)
 
+---
+
 ## Education
 
 ### Kent State University

@@ -13,7 +13,11 @@ NavLink.prototype.__activate = function() {
 };
 
 NavLink.prototype.__isActiveLink = function() {
-  return this.currentPath.match(new RegExp("^" + this.el.pathname)) != null;
+  return this.currentPath.match(new RegExp("^" + this.__pathname())) != null;
+};
+
+NavLink.prototype.__pathname = function() {
+  return "/" + this.el.pathname.replace(/^\//, '');
 };
 
 ["nav-resume", "nav-about", "nav-blog"].some(function(navElId) {
