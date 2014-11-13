@@ -1,0 +1,104 @@
+// public api:
+// @include col(1,0);
+// @include row();
+
+// override these before you import this file if you don't want to use the defaults.
+$wi-width: 940px !default;
+$wi-cols: 12 !default;
+$wi-gutter: 20px !default; // must be divisible by 2 for accratue spacing.
+$wi-stacked-width: 90% !default;
+$wi-stacked-breakpoint: 499px !default;
+
+$wi-ie7: false !default;
+$wi-responsive: true !default;
+
+$wi-fluid-start: #{$wi-width - 1};
+$wi-fluid-end: #{$wi-stacked-breakpoint + 1};
+$wi-responsive-margin: (100-$wi-stacked-width)/2;
+
+// the maths for cal width and responsive stuff.
+$wi-col-width: $wi-width / $wi-cols;
+
+@mixin responsive-row() {
+  @media only screen and (max-width: $wi-fluid-start){
+    width: 100%;
+  }
+}
+@mixin responsive-col($col, $offset, $append) {
+  // small screens?
+  @media only screen and (max-width: $wi-stacked-breakpoint ) {
+    width: $wi-stacked-width;
+    margin-left: $wi-responsive-margin;
+    margin-right: $wi-responsive-margin;
+  }
+
+  @media only screen and (max-width: $wi-fluid-start) and (min-width: $wi-fluid-end) {
+    $large-width: ($col/$wi-cols) * 100%;
+    // this is gross!
+    @if $offset > 0 or $append > 0 {
+      @if $offset > 0 {
+        $offset-width: ($offset/$wi-cols) * 100%;
+        margin-left: $offset-width;
+      }
+      @if $append > 0 {
+        $append-width: ($append/$wi-cols) * 100%;
+        margin-right: $append-width;
+      }
+    } @else {
+      $large-width: $large-width - 2;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    width: $large-width;
+  }
+}
+
+@function margin-math($n) {
+  @return ($wi-col-width * $n) + ($wi-gutter/2);
+}
+// prepend and append do the same math but they are dependent on a number being passed in.
+@mixin prepend($n: 1) {
+  margin-left: margin-math($n);
+}
+@mixin append($n: 1) {
+  margin-right: margin-math($n);
+}
+@mixin width($n: 1) {
+  width: ($n * $wi-col-width) - $wi-gutter;
+}
+@mixin row() {
+  width: $wi-width;
+  margin-left: auto;
+  margin-right: auto;
+  @if $wi-responsive {
+    @include responsive-row();
+  }
+}
+@mixin col($col: 1, $offset: 0, $append: 0 ) {
+  // $col = width in cols
+  // $offset = offset in cols
+  display: inline-block;
+  vertical-align: top;
+  @if $wi-ie7 {
+    .ie7 & {
+      zoom: 1;
+      display: inline;
+    }
+  }
+  @include width($col);
+  @if $offset > 0 {
+    @include prepend($offset);
+  }
+  @else {
+    margin-left: $wi-gutter/2;
+  }
+  @if $append > 0 {
+    @include append($append);
+  }
+  @else {
+    margin-right: $wi-gutter/2;
+  }
+  @if $wi-responsive {
+    @include responsive-col($col, $offset, $append);
+  }
+}

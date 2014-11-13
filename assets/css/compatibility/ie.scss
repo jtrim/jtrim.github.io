@@ -1,0 +1,15 @@
+.ie9 {
+  hr {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.ie {
+  .masthead {
+    position: relative;
+    top: -4px;
+  }
+}

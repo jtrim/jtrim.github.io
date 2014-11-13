@@ -1,0 +1,67 @@
+body.parts-kit {
+  .kit-head {
+    color: $magenta;
+  }
+
+  .colorboxes-outer {
+    @extend %has-bottom-prop;
+  }
+
+  .colorbox {
+    $colorbox-size: 75px;
+    width: $colorbox-size;
+    height: $colorbox-size;
+    display: inline-block;
+    margin-right: $box-spacing;
+    margin-bottom: $box-spacing;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+
+    &:before {
+      content: ' ';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    small {
+      display: inline-block;
+    }
+
+    &.magenta      { background: $magenta }
+    &.pastel-green { background: $pastel-green }
+    &.slate-blue   { background: $slate-blue }
+    &.blood-red    { background: $blood-red }
+    &.sky-blue     { background: $sky-blue }
+    &.cyan         { background: $cyan }
+
+    &.gray1 { background: $gray1 }
+    &.gray2 { background: $gray2 }
+    &.gray3 { background: $gray3 }
+    &.gray4 { background: $gray4 }
+    &.gray5 { background: $gray5 }
+  }
+
+  .font-examples {
+    @each $font-weight in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+      .weight-#{$font-weight} {
+        font-weight: #{$font-weight};
+      }
+    }
+
+    @each $font-name in
+      avant-garde,
+      neuzeit-grotesk,
+      open-sans,
+      roboto,
+      monospace
+    {
+      .#{$font-name} {
+        * {
+          @extend %#{$font-name};
+        }
+      }
+    }
+  }
+}

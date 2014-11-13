@@ -1,0 +1,23 @@
+.main {
+  @include row();
+  padding-top: 80px;
+
+  @include media($stacked) {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    @include col(7);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .masthead {
+    @include col(5);
+
+    @include media($stacked) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
