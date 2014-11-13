@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  Fast UI Development in Large Rails Codebases
+title: Fast UI Development in Large Rails Codebases
 categories: development
 tags: rails unicorn
-permalink: fast-ui-development-rails.html
-content_as_excerpt: true
+permalink: fast-ui-development-rails/
 ---
 
 I've spent the past year working on a product running on a relatively large
@@ -24,6 +23,8 @@ being asked to serve all asset requests the browser issues, including assets.
 In our case, without completely realizing it ended up asking Rails for *a lot*
 of stuff. Based on this, it would stand to reason that if we're asking too much
 of a single Rails process, adding processes might help the problem, right?
+
+<!--\-->
 
 #### Unicorn: Let's Add Some Concurrency
 

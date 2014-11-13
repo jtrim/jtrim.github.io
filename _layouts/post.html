@@ -1,14 +1,13 @@
 ---
 layout: default
-small: 'Thoughts on code.'
 ---
 
-<h3 class="title">
-  {{ page.title }}
-  <small>{{ page.date | date: "%B %d, %Y" }}</small>
-</h3>
-
 <div class="post">
+  <h2 class="title">
+    {{ page.title }}
+    <small>{{ page.date | date: "%B %d, %Y" }}</small>
+  </h2>
+
   {{ content }}
 </div>
 <div id="disqus_thread"></div>

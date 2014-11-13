@@ -1,0 +1,154 @@
+.masthead {
+  position: relative;
+
+  .main-headline,
+  .secondary-headline {
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .main-headline {
+    font-size: inherit;
+    line-height: 4em;
+
+    @include media($restricted) {
+      font-size: 6.3vw;
+      line-height: .95em;
+    }
+
+    @include media($stacked) {
+      text-align: center;
+      line-height: inherit;
+    }
+
+    a {
+      vertical-align: top;
+      color: $magenta;
+      font-size: 64px;
+      @extend %avant-garde;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include media($restricted) {
+        font-size: 6.3vw;
+      }
+
+      @include media($stacked) {
+        font-size: 14.2vw;
+
+        @include hidpi {
+          font-size: 13.1vw;
+        }
+      }
+    }
+  }
+
+  .secondary-headline {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    @extend %neuzeit-grotesk;
+    font-size: 26px;
+    color: $pastel-green;
+
+    small {
+      padding-left: 6px;
+      @extend %neuzeit-grotesk;
+      text-transform: lowercase;
+      color: $gray1;
+      font-size: 18px;
+    }
+
+    @include media($restricted) {
+      text-align: center;
+      font-size: 3.4vw;
+
+      small {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+
+    @include media($stacked) {
+      text-align: center;
+      font-size: 7.7vw;
+
+      small {
+        display: none;
+      }
+
+      @include hidpi {
+        font-size: 7.3vw;
+      }
+    }
+  }
+
+  .nav-divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .main-nav,
+  .phone {
+    text-align: center;
+
+    .mobile  { display: none; }
+    .desktop { display: inherit; }
+
+    @include media($stacked) {
+      .mobile  { display: inherit; }
+      .desktop { display: none; }
+    }
+  }
+
+  .main-nav {
+    margin-top: 20px;
+
+    a {
+      @extend %neuzeit-grotesk;
+      text-transform: lowercase;
+      text-decoration: none;
+      color: $slate-blue;
+      font-size: 18px;
+      display: inline-block;
+      padding: 5px 15px 3px 15px;
+      margin: 0 5px;
+      position: relative;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: white;
+        background: $slate-blue;
+
+        &:before {
+          color: $cyan;
+        }
+      }
+
+      &.active {
+        color: $slate-blue;
+        background: $sky-blue;
+        border: 1px solid $slate-blue;
+
+        &:before {
+          color: $cyan;
+        }
+      }
+    }
+  }
+
+  .phone {
+    margin-top: 5px;
+    font-weight: 100;
+    color: $gray1;
+
+    * {
+      @extend %roboto;
+    }
+  }
+}
