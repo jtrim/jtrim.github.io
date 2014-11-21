@@ -23,12 +23,33 @@ footer {
 }
 
 code {
-  background: yellow;
-  color: $blood-red;
-  border: 1px solid darken(yellow, 10%);
+  background: lighten(yellow, 20%);
+  color: darken($blood-red, 10%);
   padding: 0 2px;
-  font-size: 13px;
+  font-size: 14px;
   @extend %monospace;
+  line-height: 20px;
+
+   * {
+     @extend %monospace;
+   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  code {
+    background: none;
+    color: inherit;
+    border: none;
+  }
+
+}
+
+h4 code {
+  font-size: 20px;
+}
+
+small code {
+  font-size: 12px;
 }
 
 pre {
@@ -37,6 +58,7 @@ pre {
   padding: 10px;
   background: $sky-blue;
   @extend %monospace;
+  overflow: auto;
 
   code {
     background: inherit;
