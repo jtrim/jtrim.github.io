@@ -58,6 +58,7 @@ pre {
   padding: 10px;
   background: $sky-blue;
   @extend %monospace;
+  overflow: auto;
 
   code {
     background: inherit;
