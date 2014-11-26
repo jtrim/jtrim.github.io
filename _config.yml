@@ -9,6 +9,7 @@ github_username:  jtrim
 excerpt_separator: <!--\-->
 markdown: kramdown
 kramdown:
+  use_coderay: true
   auto_ids: true
   hard_wrap: false
   input: GFM
