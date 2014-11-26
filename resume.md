@@ -18,9 +18,9 @@ Ruby on Rails v4.1.x, Ruby2, Backbone.js, Knockout.js, AWS S3/Cloudfront, Redis,
 Breastcancer.org, Brussels + Muscles (via Be Colorado)
 
 #### Work
-- [Breastcancer.org](www.breastcancer.org)
-- [Brussels + Muscles](www.becolordao.org): A program for Be Colorado focused on daily fitness / nutritional goals for kids age 5-11
-- [SchoolVault](www.schoolvault.net): A student/teacher platform focused on tracking individual student needs through frequently issued formative assessments
+- [Breastcancer.org](http://www.breastcancer.org)
+- [Brussels + Muscles](http://www.brusselsandmuscles.org): A program for Be Colorado focused on daily fitness / nutritional goals for kids age 5-11
+- [SchoolVault](http://www.schoolvault.net): A student/teacher platform focused on tracking individual student needs through frequently issued formative assessments
 
 <br>
 
