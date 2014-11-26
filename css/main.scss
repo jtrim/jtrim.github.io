@@ -1,0 +1,221 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Inconsolata:400,700);
+@import url("//hello.myfonts.net/count/2c662e"); // AvantGarde
+@import url("//hello.myfonts.net/count/2c662f"); // Neuzeit Grotesk
+@charset "utf-8";
+
+$magenta: #ff1b86;
+$pastel-green: #b1d199;
+$slate-blue: #14B8CC;
+$blood-red: #b21267;
+$sky-blue: #e3f9fc;
+$cyan: #77eaee;
+
+$gray1: #888888;
+$gray2: #ababab;
+$gray3: #afafaf;
+$gray4: #cfcfcf;
+$gray5: #efefef;
+
+$fa-font-path: "/fonts";
+
+// Our variables
+$base-font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.9;
+
+$spacing-unit:     40px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+// $brand-color:      #2a7ae2;
+$brand-color:      magenta;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "fonts",
+        "fontawesome/scss/font-awesome"
+;
+
+pre,
+code {
+  font-family: Inconsolata, monospace;
+}
+
+code {
+  background: #eef;
+  font-size: $base-font-size;
+  padding: 2px 5px;
+}
+
+a {
+  code {
+    text-decoration: underline;
+  }
+}
+
+.site-title {
+  font-family: AvantGarde, Helvetica Neue, Arial;
+  font-size: 42px;
+  text-transform: uppercase;
+  position: relative;
+  top: 3px;
+}
+
+small.footnote {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.4em;
+
+  code {
+    font-size: 13px;
+  }
+}
+
+@for $i from 1 through 15 {
+  #footnote#{$i} {
+    @extend small.footnote;
+  }
+}
+
+@mixin transform($transformations) {
+  -webkit-transform: $transformations;
+  transform: $transformations;
+}
+
+@mixin icon($name, $position: 'before') {
+  &:#{$position} {
+    @extend .fa;
+    @extend .fa-#{$name}:before;
+    @content;
+  }
+}
+
+@mixin hr-circle {
+  @include icon('circle-thin') {
+    @include transform(translate(-50%, -50%));
+    text-align: center;
+    color: $gray4;
+    background: $background-color;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25px;
+  }
+}
+
+@mixin hr-circle-sattellite {
+  @include icon('circle-thin', after) {
+    @include transform(translate(-220%, -220%));
+    font-size: 5px;
+    color: $gray1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: $gray4;
+  position: relative;
+  overflow: visible;
+  @include hr-circle;
+  @include hr-circle-sattellite;
+  margin: 45px 0;
+}
+
+.previous-post,
+.next-post {
+  width: 50%;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+
+  span {
+    color: #666;
+  }
+
+  a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
+
+.previous-post {
+  span {
+    @include icon(angle-left) {
+      padding-right: 5px;
+    }
+  }
+}
+
+.next-post {
+  text-align: right;
+
+  span {
+    @include icon(angle-right, after) {
+      padding-left: 5px;
+    }
+  }
+}
+
+ul {
+  list-style-type: square;
+}
+
+body.resume {
+  h2 {
+    &:first-child {
+      margin-top: -17px;
+    }
+  }
+
+  h3 {
+    color: $magenta;
+    line-height: 1.2em;
+
+    small {
+      display: block;
+      font-size: 16px;
+    }
+  }
+
+  h4 {
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+  }
+}

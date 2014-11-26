@@ -1,29 +1,13 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html class="ie ie9"><![endif]-->
-<!--[if IE 10]><html class="ie"><![endif]-->
-<!--[if !IE]><!--><html><!--<![endif]-->
-  <head>
-    <title>{{ page.title }} - Jesse Trimble</title>
-    <link href="/assets/css/styles.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
-    <meta charset="UTF-8">
-  </head>
-  <body class="{{ page.body_classname }}">
-    <div class="main">
-      {% include masthead.html %}
-      <section class="main-content">
+<html>
+  {% include head.html %}
+  <body{% if page.body_classname %} class="{{ page.body_classname }}"{% endif %}>
+    {% include header.html %}
+    <div class="page-content">
+      <div class="wrapper">
         {{ content }}
-      </section>
+      </div>
     </div>
-    <footer>
-      <nav class="secondary-nav">
-        <a class="github" href="https://github.com/jtrim">Github</a>
-        <a class="twitter" href="https://twitter.com/jessetrimble">Twitter</a>
-        <a class="instagram" href="http://instagram.com/jessetrimble">Instagram</a>
-      </nav>
-    </footer>
-    <script src="/assets/js/main.js"></script>
-    {% include ga.html %}
+    {% include footer.html %}
   </body>
 </html>

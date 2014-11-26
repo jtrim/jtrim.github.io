@@ -34,13 +34,8 @@ the work up for you relatively seamlessly. Essentially, as the browser is
 issuing requests, the master process is delegating the fulfillment of each
 request to a different process. That means that if you've specified that the
 Unicorn master process should start three worker processes, each of those
-processes should handle roughly a third of the requests the master receives.\*
-
-<small>
-\* In reality it doesn't actually work out to be a third because of varying
-amounts of work being done per-request. I've simplified for the sake of
-discussion.
-</small>
+processes should handle roughly a third of the requests the master
+receives.[*](#footnote1)
 
 After adding Unicorn and scaling up the number of worker processes, I expected
 to see a significant decrease in request times. What I found was disappointing
@@ -55,9 +50,9 @@ A default Rails development configuration
 (`config/environments/development.rb`) has a couple of configuration lines, one
 of which is:
 
-{% highlight ruby %}
+```ruby
 config.cache_classes = false
-{% endhighlight %}
+```
 
 This configuration is the part that allows us to change some of our application
 code and see those changes reflected the next time we hit the server. This is
@@ -70,9 +65,9 @@ production.
 With the application server responding much faster, there was one more line in
 the configuration that stood out:
 
-{% highlight ruby %}
+```ruby
 config.assets.debug = true
-{% endhighlight %}
+```
 
 When assets from the Asset Pipeline, this configuration essentially expands all
 of our `//= require ...` directives into actual server requests. While this
@@ -93,7 +88,7 @@ take one more dive into the Unicorn docs just for kicks, and I found something.
 
 Unicorn was built on strong principles lying in the foundation of Unix (see [I
 like Unicorn because it's Unix](http://tomayko.com/writings/unicorn-is-unix) by
-Ryan Tomayko, good read). As such, it's capable of receiving and reacting to [various
+Ryan Tomayko). As such, it's capable of receiving and reacting to [various
 signals](http://unicorn.bogomips.org/SIGNALS.html). More specifically, Unicorn
 reacts to receiving a SIGHUP by reloading its configuration file and restarting
 all of its workers. Sending a signal to the process for code reloading is only
@@ -106,7 +101,7 @@ is what makes this all come together.
 When you start a Unicorn server, you'll see output that looks something like
 this:
 
-<pre>
+```text
 started with pid 25747
 [2013-08-25T20:14:38.044546 #25747]  INFO -- : Refreshing Gem list
 [2013-08-25T20:14:45.094800 #25747]  INFO -- : listening on addr=0.0.0.0:3000 fd=12
@@ -114,21 +109,29 @@ started with pid 25747
 [2013-08-25T20:14:45.135473 #25751]  INFO -- : worker=1 ready
 [2013-08-25T20:14:45.135675 #25750]  INFO -- : worker=0 ready
 [2013-08-25T20:14:45.141830 #25752]  INFO -- : worker=2 ready
-</pre>
+```
 
 Since we know the PID, we can send a signal to it via:
 
-<pre>
+```text
 kill -1 25757
-</pre>
+```
 
 Running this manually gets us our code reload, so to bring Rerun into the mix,
 all we need is:
 
-<pre>
+```text
 rerun -- kill -1 25757
-</pre>
+```
 
 With a little Rerun tuning, you can restrict the types of files it watches to
 a path pattern, making it ignore anything in `app/assets` and watch for changes
 in application code.
+
+---
+
+<small id="footnote1">
+**\*** In reality it doesn't actually work out to be a third because of varying
+amounts of work being done per-request. I've simplified for the sake of
+discussion.
+</small>

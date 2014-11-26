@@ -7,12 +7,7 @@ Recursion can be a scary topic. On the surface, it requires you to keep more of 
 
 In reality, most of the time we don't even really have to care about this mental stack trace. It is actually way simpler than that. <!--\-->Let's take a simple function that reverses a list (in Ruby):
 
-```ruby
-def list_reverse(list)
-  return list if list.empty?
-  [list.pop] + list_reverse(list)
-end
-```
+<script src="https://gist.github.com/jtrim/534c70f83667e8140b57.js"></script>
 
 Looks pretty simple, right? Let's look at what this function actually does:
 

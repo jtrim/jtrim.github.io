@@ -1,7 +1,0 @@
-@mixin icon($name, $position: 'before') {
-  &:#{$position} {
-    @extend .fa;
-    @extend .fa-#{$name}:before;
-    @content;
-  }
-}

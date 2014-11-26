@@ -1,12 +1,16 @@
-name: Jesse Trimble - Rubyist, Javascript Enthusiast
+title: Jesse Trimble
+email: jesseltrimble@gmail.com
+description: >
+  Jesse Trimble: Rubyist, functional programming enthusiast, hobby hobbyist.
+baseurl: ""
+url: "http://jessetrimble.net"
+twitter_username: jessetrimble
+github_username:  jtrim
 excerpt_separator: <!--\-->
-highlighter: true
-sass:
-  sass_dir: assets
-
 markdown: kramdown
 kramdown:
   auto_ids: true
   hard_wrap: false
   input: GFM
   smart_quotes:  ["apos", "apos", "quot", "quot"]
+  coderay_line_numbers: nil

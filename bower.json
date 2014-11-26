@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.2.0",
-    "normalize.css": "~3.0.2"
+    "fontawesome": "~4.2.0"
   }
 }
