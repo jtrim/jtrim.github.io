@@ -95,5 +95,5 @@ Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
 ## Education
 
 ### Kent State University
-*May 2007* - Associate Degree of Applied Business in Computer Technology   
+*May 2007* - Associate Degree of Applied Business in Computer Technology<br>
 *May 2009* - Bachelor of Science in Technology - Cum Laude
