@@ -2,9 +2,11 @@
 title: 'Antipatterns: Subclassing Struct Instances in Ruby'
 layout: post
 permalink: '/antipatterns-subclassing-struct-ruby/'
+excerpt: >
+  Using plain Ruby objects to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails application that made effective use of this notion, but did it through subclassing instances of Ruby's Struct class. This makes for nicely succinct code, but introduces some insidious problems that are likely to creep up later.
 ---
 
-Using POROs (plain old Ruby objects) to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails application that made effective use of this notion, but did it through subclassing instances of Ruby's `Struct` class. Here's a contrived example illustrating the activation of a user:
+Using POROs (plain old Ruby objects) to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails application that made effective use of this notion, but did it through subclassing instances of Ruby's `Struct` class. <!--\-->Here's a contrived example illustrating the activation of a user:
 
 <script src="https://gist.github.com/jtrim/1e965728892b79de2de7.js"></script>
 
