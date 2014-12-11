@@ -92,6 +92,13 @@ Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
 [Whirl](https://github.com/jtrim/whirl)<br>
 [Littlenote](https://github.com/jtrim/littlenote)
 
+#### Open-source Learning-focused Projects
+
+[js-framework-demos](https://github.com/jtrim/js-framework-demos): A sandbox to demo JS frameworks, similar to TodoMVC<br>
+[string_calculator_ex](https://github.com/jtrim/string_calculator_ex): An implementation of the StringCalculator kata in Elixir<br>
+[string-calculator-hs](https://github.com/jtrim/string-calculator-hs): Implementation of the same in Haskell<br>
+[littlenote-hs](https://github.com/jtrim/littlenote-hs): Haskell version of my Littlenote shell script<br>
+
 ## Education
 
 ### Kent State University
