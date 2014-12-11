@@ -5,6 +5,51 @@ title: Resume
 body_classname: 'resume'
 ---
 
+## Skills
+
+#### Tools
+
+- Vim, Tmux, Unix shell environments
+- MacOS, Linux
+
+#### Languages
+
+- Great with Ruby, Javascript, Coffeescript, HTML, CSS/Sass
+Javascript / Coffeescript, SQL
+- Can operate in Objective C, Bash, C#, PHP
+- Basic knowledge of Erlang, Elixir, Haskell, Clojure
+
+#### Web Frameworks, Generators, Notable Libraries
+
+- Ruby on Rails, Sinatra, Jekyll, Merb
+- Rspec, Cucumber, Capybara
+- Basic knowledge of Phoenix / Ecto
+
+#### Frontend Libraries and Frameworks
+
+- jQuery
+- Knockout + Knockback
+- Ember
+- Underscore.js / Backbone.js
+- Brief exposure to AngularJS
+- Bourbon / Neat
+- Jasmine
+
+#### Databases / Stores
+
+- PostgreSQL, MySQL, MS SQL Server
+- Redis, Memcached
+- Cursory experience with MongoDB, CouchDB, Riak
+
+#### Cloud / Deployment
+
+- Heroku
+- Engine Yard
+- Docker
+- Amazon EC2, S3, CloudFront, Route53, RDS
+- Amazon AWS API
+- Zencoder
+
 ## Experience
 
 ### Foraker Labs <small>10.2013-11.2014 - Software Developer</small>
@@ -12,7 +57,7 @@ body_classname: 'resume'
 Working in small, close-knit teams for a handful of clients, I helped Foraker form its agile process around the team and it's client base to end up with a flavor of Scrum that Foraker can run with. Additionally, I led the initiative in a company-wide mentoring effort for intern and junior developers. Maintaining an extremely high standard for quality-of-work, I incorporated new features to existing, long-lived projects and built new software from the ground up.
 
 #### Technologies
-Ruby on Rails v4.1.x, Ruby2, Backbone.js, Knockout.js, AWS S3/Cloudfront, Redis, Coffeescript, RSpec, Capybara, Jasmine, PostgreSQL, Memcached, Zencoder, Haskell (brief exposure)
+Ruby on Rails v4.1.x, Ruby2, Backbone.js, Knockout.js, AWS S3/Cloudfront/RDS, Redis, Coffeescript, RSpec, Capybara, Jasmine, PostgreSQL, Memcached, Zencoder, Haskell (brief exposure)
 
 #### Brands
 Breastcancer.org, Brussels + Muscles (via Be Colorado)
