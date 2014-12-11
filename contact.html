@@ -1,0 +1,83 @@
+---
+permalink: 'contact/'
+title: 'Get In Touch'
+layout: page
+body_classname: "contact"
+---
+
+<p>
+  If you're interested in chatting about custom software, like one of my
+  articles, or just want to catch up, I'd love to hear from you! Feel free to
+  reach out via <a href="mailto:jesseltrimble@gmail.com">email</a> or fill out
+  this form, and I'll get back to you promptly!
+</p>
+
+<div id="thanks-target"></div>
+
+<form accept-charset="UTF-8" action="https://formkeep.com/f/d9879fac259d" method="POST">
+  <input type="hidden" name="utf8" value="✓">
+
+  <div class="input">
+    <label for="contact_name">Your name*</label>
+    <input type="text" id="contact_name" name="name" required />
+  </div>
+
+  <div class="input">
+    <label for="contact_email">Your email address*</label>
+    <input type="email" id="contact_email" name="email" required />
+  </div>
+
+  <div class="input">
+    <label for="contact_body">Your thoughts*</label>
+    <textarea id="contact_body" name="thoughts" required></textarea>
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="Send it!" id="contact-submit" />
+  </div>
+</form>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script>
+  if (location.hash.match(/thanks/)) {
+    var thanksEl = document.createElement("div");
+    thanksEl.className = "contact-thanks";
+    thanksEl.innerHTML = "Thanks! Your message should show up in my inbox shortly, so I'll get back to you as soon as I can.";
+
+    document.getElementById('thanks-target').appendChild(thanksEl);
+  }
+
+  var contactButton = document.getElementById('contact-submit')
+  contactButton.onclick = function() {
+    var _this = this;
+
+    var getLabel = function(input) {
+      return _.findWhere(document.getElementsByTagName('label'), { htmlFor: input.id });
+    };
+
+    var isValid = _.chain(["contact_name", "contact_email", "contact_body"])
+      .map(function(id) {
+        var el = document.getElementById(id);
+        var label = getLabel(el);
+        el.className = "";
+        label.className = "";
+
+        if (_.isEmpty(el.value)) {
+          el.className = "missing";
+          label.className = "missing";
+          return false;
+        }
+        return true;
+      })
+      .every(_.identity)
+      .value();
+
+    if (!isValid) {
+      return false;
+    };
+
+    setTimeout(function() {
+      _this.disabled = "disabled";
+    }, 0);
+  };
+</script>
