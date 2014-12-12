@@ -10,6 +10,7 @@ body_classname: 'resume'
 #### Tools
 
 - Vim, Tmux, Unix shell environments
+- Git, Github, Bitbucket
 - MacOS, Linux
 
 #### Languages
