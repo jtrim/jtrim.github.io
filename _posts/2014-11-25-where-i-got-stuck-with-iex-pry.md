@@ -37,5 +37,5 @@ Being brand-new at Elixir (and _definitely_ Phoenix), needing to run my Phoenix 
 </small>
 
 <small id="footnote2">
-**Update** - Thanks to [@kdisneur](https://twitter.com/kdisneur), [@fishcakez](https://github.com/fishcakez), and [@josevalim](https://twitter.com/josevalim), a version of remote `IEx.pry` has landed in Elixir! See https://github.com/elixir-lang/elixir/issues/3392.
+**Update** - Thanks to [@kdisneur](https://twitter.com/kdisneur), [@fishcakez](https://github.com/fishcakez), and [@josevalim](https://twitter.com/josevalim), a version of remote `IEx.pry` has landed in Elixir! See [https://github.com/elixir-lang/elixir/issues/3392](https://github.com/elixir-lang/elixir/issues/3392).
 </small>
