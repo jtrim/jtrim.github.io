@@ -35,3 +35,7 @@ Being brand-new at Elixir (and _definitely_ Phoenix), needing to run my Phoenix 
 <small id="footnote1">
 **\*** After briefly reading through the `IEx.Server` source again, I'm not convinced that the original behavior I expected isn't possible, it just appears `IEx.pry` doesn't support it. I'll follow up here if I later discover that it is.
 </small>
+
+<small id="footnote2">
+**Update** - Thanks to [@kdisneur](https://twitter.com/kdisneur), [@fishcakez](https://github.com/fishcakez), and [@josevalim](https://twitter.com/josevalim), a version of remote `IEx.pry` has landed in Elixir! See https://github.com/elixir-lang/elixir/issues/3392.
+</small>
