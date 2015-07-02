@@ -55,7 +55,7 @@ Javascript / Coffeescript, SQL
 
 ### Ello, PBC <small>1.2015-7.2015 - Software Engineer</small>
 
-Building the Ello web application in an ultra fast-paced setting, with hands on all aspects of the codebase. From manipulating and extending a custom UI framework, to building and optimizing a large Rails application sitting on top of billions of records of social data. Performed control / candidate refactoring of critical API pathways, and introduced a custom-tailored caching strategy for rapidly changing API data.
+Building the Ello web application in an ultra fast-paced setting with hands on all aspects of the codebase. From manipulating and extending a custom UI framework, to building out a large Rails application sitting on top of billions of records of social data. Performed control / candidate refactoring of critical API pathways, and introduced a custom-tailored caching strategy for rapidly changing API data. Optimized difficult-to-tune execution paths with custom eager loading strategies and selective caching.
 
 <br>
 
