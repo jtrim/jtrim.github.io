@@ -3,7 +3,7 @@ title: 'Antipatterns: Subclassing Struct Instances in Ruby'
 layout: post
 permalink: '/antipatterns-subclassing-struct-ruby/'
 excerpt: >
-  Using plain Ruby objects to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails application that made effective use of this notion, but did it through subclassing instances of Ruby's Struct class. This makes for nicely succinct code, but introduces some insidious problems that are likely to creep up later.
+  Using plain Ruby objects to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails app that made effective use of this notion, but did it through subclassing instances of Ruby's Struct class. This makes for nicely succinct code, but introduces some insidious problems that are likely to creep up later.
 ---
 
 Using POROs (plain old Ruby objects) to encompass specific domain concepts is a great way to address model bloat in Rails applications. I recently worked on a medium-sized Rails application that made effective use of this notion, but did it through subclassing instances of Ruby's `Struct` class. <!--\-->Here's a contrived example illustrating the activation of a user:
@@ -49,7 +49,7 @@ activation = Activation.new(user)
 activation.token = "ABCDEF"
 ```
 
-In the absence of a specific reason for allowing either of these forms, we should always strive to be as specific as possible with regard to how an object is to be used. In considering that each API we expose to the public is essentially a contract of a service the object provides (and how the service is provided, i.e. the usage of the API), we're putting ourselves in a situation where we have to maintain an increased amount of complexity in our API, and it puts us at greater risk of issuing an otherwise inconsequential change that breaks our API later (a major version bump in [Semver](http://semver.org/).
+In the absence of a specific reason for allowing either of these forms, we should always strive to be as specific as possible with regard to how an object is to be used. In considering that each API we expose to the public is essentially a contract of a service the object provides (and how the service is provided, i.e. the usage of the API), we're putting ourselves in a situation where we have to maintain an increased amount of complexity in our API, and it puts us at greater risk of issuing an otherwise inconsequential change that breaks our API later (a major version bump in [Semver](http://semver.org/)).
 
 ### Then What the Heck Is `Struct` For?
 
