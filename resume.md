@@ -59,7 +59,7 @@ Building the Ello web application in an ultra fast-paced setting, with hands on 
 
 <br>
 
-### Foraker Labs <small>10.2013-11.2014 - Software Developer</small>
+### Foraker Labs <small>10.2013-11.2014 - Software Engineer</small>
 
 Working in small, close-knit teams for a handful of clients, I helped Foraker form its agile process around the team and it's client base to end up with a flavor of Scrum that Foraker can run with. Additionally, I led the initiative in a company-wide mentoring effort for intern and junior developers. Maintaining an extremely high standard for quality-of-work, I incorporated new features to existing, long-lived projects and built new software from the ground up.
 
@@ -76,7 +76,7 @@ Breastcancer.org, Brussels + Muscles (via Be Colorado)
 
 <br>
 
-### Factory Design Labs <small>9.2011-10.2013 - Technical Architect, Product Anchor</small>
+### Factory Design Labs <small>9.2011-10.2013 - Software Engineer, Technical Architect, Product Anchor</small>
 
 In addition to solving problems with software, my role with Factory Labs was heavy on collaboration - both cross-team and inter-disciplinary. Working closely with Strategy, Account, and Creative staff, we're empowered to take a strong stance on ownership of whatever it was we were tasked with. Also, as Muse Studio product anchor, I communicated directly with our clients on a regular basis to help guide the direction of the product.
 
