@@ -35,11 +35,12 @@ Javascript / Coffeescript, SQL
 - Brief exposure to AngularJS
 - Bourbon / Neat
 - Jasmine
+- Candidate ES6 functionality
 
 #### Databases / Stores
 
 - PostgreSQL, MySQL, MS SQL Server
-- Redis, Memcached
+- Redis, Memcached, ElasticSearch
 - Cursory experience with MongoDB, CouchDB, Riak
 
 #### Cloud / Deployment
@@ -47,11 +48,16 @@ Javascript / Coffeescript, SQL
 - Heroku
 - Engine Yard
 - Docker
-- Amazon EC2, S3, CloudFront, Route53, RDS
-- Amazon AWS API
+- Amazon EC2, S3, CloudFront, Route53, RDS, AWS API
 - Zencoder
 
 ## Experience
+
+### Ello, PBC <small>1.2015-5.2015 - Software Engineer</small>
+
+Building the Ello web application in an ultra fast-paced setting, with hands on all aspects of the codebase. From manipulating and extending a custom UI framework, to building and optimizing a large Rails application sitting on top of billions of records of social data. Performed control / candidate refactoring of critical API pathways, and introduced a custom-tailored caching strategy for rapidly changing API data.
+
+<br>
 
 ### Foraker Labs <small>10.2013-11.2014 - Software Developer</small>
 
