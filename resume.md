@@ -134,6 +134,7 @@ Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
 
 [github.com/jtrim](https://github.com/jtrim)
 
+[heroku-buildpack-traffic-duplicator](https://github.com/jtrim/heroku-buildpack-traffic-duplicator)
 [Carrierwave](https://github.com/carrierwaveuploader/carrierwave)<br>
 [Draper](https://github.com/drapergem/draper)<br>
 [Spin](https://github.com/jstorimer/spin)<br>
