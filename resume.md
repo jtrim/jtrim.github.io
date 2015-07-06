@@ -132,18 +132,25 @@ Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
 
 ## Open-source
 
+#### My work
+
 [github.com/jtrim](https://github.com/jtrim)
 
-[heroku-buildpack-traffic-duplicator](https://github.com/jtrim/heroku-buildpack-traffic-duplicator)
-[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)<br>
-[Draper](https://github.com/drapergem/draper)<br>
-[Spin](https://github.com/jstorimer/spin)<br>
-[RequirejsOptimizer](https://github.com/jtrim/requirejs_optimizer)<br>
-[Mariner](https://github.com/jtrim/mariner)<br>
-[Abyss](https://github.com/jtrim/abyss)<br>
-[Speakeasy](https://github.com/jtrim/speakeasy)<br>
-[Whirl](https://github.com/jtrim/whirl)<br>
+[heroku-buildpack-traffic-duplicator](https://github.com/jtrim/heroku-buildpack-traffic-duplicator)   
+[RequirejsOptimizer](https://github.com/jtrim/requirejs_optimizer)   
+[Mariner](https://github.com/jtrim/mariner)   
+[Abyss](https://github.com/jtrim/abyss)   
+[Speakeasy](https://github.com/jtrim/speakeasy)   
+[Whirl](https://github.com/jtrim/whirl)   
 [Littlenote](https://github.com/jtrim/littlenote)
+
+#### Projects I've contributed to
+
+[teaspoon](https://github.com/modeset/teaspoon)   
+[ruby-protobuf](https://github.com/ruby-protobuf/protobuf)   
+[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)   
+[Draper](https://github.com/drapergem/draper)   
+[Spin](https://github.com/jstorimer/spin)   
 
 #### Open-source Learning-focused Projects
 
