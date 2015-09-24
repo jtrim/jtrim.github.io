@@ -16,7 +16,7 @@ body_classname: 'resume'
 #### Languages
 
 - Great with Ruby, Javascript, Coffeescript, HTML, CSS/Sass
-Javascript / Coffeescript, SQL
+Javascript/Coffeescript/ES6, SQL
 - Can operate in Objective C, Bash, C#, PHP
 - Basic knowledge of Erlang, Elixir, Haskell, Clojure
 
@@ -35,13 +35,14 @@ Javascript / Coffeescript, SQL
 - Brief exposure to AngularJS
 - Bourbon / Neat
 - Jasmine
-- Candidate ES6 functionality
+- ES6 via Babeljs.io
 
 #### Databases / Stores
 
 - PostgreSQL, MySQL, MS SQL Server
 - Redis, Memcached, ElasticSearch
 - Cursory experience with MongoDB, CouchDB, Riak
+- Kafka
 
 #### Cloud / Deployment
 
@@ -53,11 +54,15 @@ Javascript / Coffeescript, SQL
 
 ## Experience
 
-### Ello, PBC <small>1.2015-7.2015 - Software Engineer</small>
+### LivingSocial <small>8.2015-present - Senior Software Engineer</small>
+
+### P2Binvestor <small>7.2015-8.2015 - Senior Software Engineer (short-term contract)</small>
+
+Filling a pivotal short-term need in building out the P2Bi product, I acted as a senior engineer and mentor for the small engineering team behind P2Bi. Diving straight into a component-based Rails architecture, I quickly built MVP components crucial to the business' short-term goals.
+
+### Ello PBC <small>1.2015-7.2015 - Software Engineer</small>
 
 Building the Ello web application in an ultra fast-paced setting with hands on all aspects of the codebase. From manipulating and extending a custom UI framework, to building out a large Rails application sitting on top of billions of records of social data. Performed control / candidate refactoring of critical API pathways, and introduced a custom-tailored caching strategy for rapidly changing API data. Optimized difficult-to-tune execution paths with custom eager loading strategies and selective caching.
-
-<br>
 
 ### Foraker Labs <small>10.2013-11.2014 - Software Engineer</small>
 
@@ -120,7 +125,7 @@ Xcode, iOS/Cocoa/Objective-C
 With RMR, I was part of a team of developers and designers that specializes in creating web-based applications for clients across the US. I was a primary developer for a multi-tenant, general admission and reserve-seating application. I also became the company's first iOS developer, leading the development effort on the CraigSelect iPhone app and other video-capture-related R+D endeavors.
 
 #### Technologies
-Xcode, iOS/Cocoa/Objective-C, C#, ASP.net, MS Sql Server
+Xcode, iOS/Cocoa/Objective-C, C#, ASP.net, PHP, CodeIgniter, MS Sql Server
 <small>
 Additional technologies:
 Visual Studio, Adobe Flash, Adobe Flex, Actionscript3
