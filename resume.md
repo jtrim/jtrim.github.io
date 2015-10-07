@@ -41,8 +41,8 @@ Javascript/Coffeescript/ES6, SQL
 
 - PostgreSQL, MySQL, MS SQL Server
 - Redis, Memcached, ElasticSearch
-- Cursory experience with MongoDB, CouchDB, Riak
 - Kafka
+- Cursory experience with MongoDB, CouchDB, Riak
 
 #### Cloud / Deployment
 
@@ -113,7 +113,7 @@ Ruby on Rails v2.3.x, ColdFusion, PostgreSql, Memcached, Apache, Nginx
 
 ### Freelance Development, Design, and Consulting <small>11.2009 - 12.2010</small>
 
-In cooperation with Bickbot, a Detroit, MI-based mobile development operation, I acted as lead developer for the architecture of an iOS application for an education-oriented product.
+In cooperation with a Detroit, MI-based mobile development firm, I acted as lead developer for the architecture of an iOS application for an education-oriented product.
 
 #### Technologies
 Xcode, iOS/Cocoa/Objective-C

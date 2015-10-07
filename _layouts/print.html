@@ -1,0 +1,75 @@
+---
+---
+
+<html>
+  {% include head.html %}
+  <body{% if page.body_classname %} class="{{ page.body_classname }}"{% endif %}>
+    <style>
+      p, a, span, li, article, strong, em {
+        font-size: 8pt!important;
+      }
+
+      h2 {
+        font-size: 10pt !important;
+      }
+
+      h3 {
+        font-size: 11pt !important;
+      }
+
+      h3 small {
+        font-size: 9pt !important;
+      }
+
+      h4 {
+        font-size: 10pt !important;
+      }
+
+      html body * {
+        color: black !important;
+      }
+
+      .secondary-info {
+        text-align: right;
+        float: right;
+        background: #fdfdfd;
+        padding-left: 30px
+      }
+
+      .secondary-info p {
+        line-height: 19px;
+      }
+
+    </style>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+          <article class="post-content">
+            <div class='secondary-info'>
+              <p>
+                692 Walden Circle<br />
+                Boulder, CO 80305<br />
+                330.432.3504
+              </p>
+              <p>
+                jessetrimble.net<br />
+                github.com/jtrim<br />
+                twitter.com/jessetrimble
+              </p>
+            </div>
+            <div>
+              <h2>
+                Jesse Trimble
+                <br />
+                <strong>
+                  Software Engineer
+                </strong>
+              </h3>
+            </div>
+            {{ content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
