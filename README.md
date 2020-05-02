@@ -1,3 +1,1 @@
 # jtrim.github.io
-
-.
